@@ -312,3 +312,20 @@ window.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("lang") || "ar";
   changeLang(savedLang);
 });
+
+/* ========== 6. Dark Mode Toggle ========== */
+document.addEventListener("DOMContentLoaded", () => {
+  const darkBtn = document.getElementById("darkModeBtn");
+  if (!darkBtn) return;
+
+  const savedMode = localStorage.getItem("darkMode");
+  if (savedMode === "enabled") {
+    document.body.classList.add("dark-mode");
+  }
+
+  darkBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const mode = document.body.classList.contains("dark-mode") ? "enabled" : "disabled";
+    localStorage.setItem("darkMode", mode);
+  });
+});
