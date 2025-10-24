@@ -225,3 +225,23 @@ html[lang="ar"] #mainNav {
   direction: rtl;
   flex-direction: row-reverse !important ;
 }
+#darkModeBtn {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+#darkModeBtn:hover {
+  background-color: #0056b3;
+}
+
