@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دليل فعاليات دبي - القرية العالمية</title>
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Cairo font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- file assets -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- flags icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #fafafa;
+    }
+    .hero img {
+      height: 450px;
+      object-fit: cover;
+    }
+    footer {
+      background-color: #222;
+      color: #eee;
+      padding: 20px 0;
+    }
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    .category-btns button {
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+   <!-- Navbar -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <img src="assets/img/logo.png" alt="Logo" width="60" height="60" class="me-2">
+    <a class="navbar-brand d-flex align-items-center" href="#" data-translate="header_title">
+      دليل فعاليات دبي
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse d-flex align-items-center justify-content-between" id="mainNav">
+      <ul class="navbar-nav" id="navList">
+        <li class="nav-item"><a class="nav-link active" href="index.html" data-translate="Home">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html" data-translate="Events">الفعاليات</a></li>
+        <li class="nav-item"><a class="nav-link" href="event.html" data-translate="Event_details">تفاصيل الفعالية</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html" data-translate="About">عن الدليل</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" data-translate="Contact_us">اتصل بنا</a></li>
+      </ul>
+
+      <!-- language switcher (flag-icons) -->
+      <div id="langSwitcher" class="dropdown">
+        <button class="btn btn-dark dropdown-toggle d-flex align-items-center gap-2" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="fi fi-ae"></span> العربية
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="langDropdown">
+          <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="changeLang('ar')"><span class="fi fi-ae"></span> العربية</a></li>
+          <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="changeLang('en')"><span class="fi fi-us"></span> English</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Slider -->
+  <div id="heroSlider" class="carousel slide hero" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/fireworks.jpg" class="d-block w-100" alt="Fireworks"> 
+        <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+          <h3 data-translate = "slide1_title">عرض الألعاب النارية</h3>
+          <p data-translate = "slide1_par">ليالي ساحرة في القرية العالمية</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/fountain-show.jpg" class="d-block w-100" alt="Fountain show">
+        <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+          <h3 data-translate = "slide2_title">عرض النافورة الراقصة</h3>
+          <p data-translate = "slide2_par">مزيج من الموسيقى والماء والضوء</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/main-stage.jpg" class="d-block w-100" alt="Main Stage">
+        <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+          <h3 data-translate = "slide3_title">المسرح العالمي</h3>
+          <p data-translate ="slide3_par" >عروض موسيقية وثقافية من حول العالم</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- Categories -->
+  <section class="container text-center my-5">
+    <h3 class="mb-3" data-translate ="title1" >تصنيفات الفعاليات</h3>
+    <div class="category-btns">
+      <button class="btn btn-outline-primary" data-translate ="bt_All" >الكل</button>
+      <button class="btn btn-outline-success" data-translate ="bt_Food">طعام</button>
+      <button class="btn btn-outline-warning" data-translate ="bt_Culture">ثقافة</button>
+      <button class="btn btn-outline-danger" data-translate ="bt_Music">موسيقى</button>
+      <button class="btn btn-outline-info" data-translate ="bt_Families">عائلي</button>
+    </div>
+  </section>
+
+  <!-- Latest events -->
+  <section class="container my-5">
+    <h3 class="text-center mb-4" data-translate ="title2">أحدث الفعاليات في القرية العالمية</h3>
+    <div class="row g-4">
+      <div class="col-md-3" data-category="ثقافة">
+        <div class="card h-100">
+          <img src="assets/img/world-market.jpg" class="card-img-top" alt="سوق العالم">
+          <div class="card-body">
+            <h5 class="card-title" data-translate ="event1">سوق العالم</h5>
+            <p class="card-text" data-translate ="event1_par">تجربة تسوق فريدة من ثقافات متعددة حول العالم.</p>
+            <a href="event.html" class="btn btn-primary" data-translate ="event1_bt">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-category="طعام">
+        <div class="card h-100">
+          <img src="assets/img/food-festival.jpg" class="card-img-top" alt="مهرجان الأطعمة">
+          <div class="card-body">
+            <h5 class="card-title" data-translate ="event2">مهرجان الأطعمة</h5>
+            <p class="card-text" data-translate ="event2_par">نكهات عالمية في أجواء احتفالية ممتعة لجميع الزوار.</p>
+            <a href="event.html" class="btn btn-primary" data-translate ="event2_bt">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-category="موسيقى">
+        <div class="card h-100">
+          <img src="assets/img/circus-show.jpg" class="card-img-top" alt="عرض السيرك العالمي">
+          <div class="card-body">
+            <h5 class="card-title" data-translate ="event3">عرض السيرك العالمي</h5>
+            <p class="card-text" data-translate ="event3_par">أداء مبهر من فنانين عالميين يجمع الإثارة والمرح.</p>
+            <a href="event.html" class="btn btn-primary" data-translate ="event3_bt">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-category="عائلي">
+        <div class="card h-100">
+          <img src="assets/img/night-view.jpg" class="card-img-top" alt="القرية ليلاً">
+          <div class="card-body">
+            <h5 class="card-title" data-translate ="event4">القرية ليلاً</h5>
+            <p class="card-text" data-translate ="event4_par">أجواء مبهجة وإضاءة ساحرة تجعل كل ليلة لا تُنسى.</p>
+            <a href="event.html" class="btn btn-primary" data-translate ="event3_bt">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="container text-center my-5">
+    <h4 data-translate ="partners">المشاركون في المشروع</h4>
+    <ul class="list-unstyled">
+      <li>Abdul_Aziz_290001</li>
+      <li>Hasan_290509</li>
+      <li>Jannat_309147</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p data-translate ="footer_info">© 2025 دليل فعاليات دبي | جميع الحقوق محفوظة</p>
+      <p>
+        <a href="#" data-translate ="insta">إنستغرام</a> | 
+        <a href="#" data-translate ="X">منصة ايكس</a> | 
+        <a href="#"data-translate ="facebook">فيسبوك</a> |
+        <a href="mailto:info@dubaievents.com">info@dubaievents.com</a>
+      </p>
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
